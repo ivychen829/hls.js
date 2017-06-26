@@ -134,8 +134,10 @@ class MP4Remuxer {
         codec :  videoTrack.codec,
         initSegment : MP4.initSegment([videoTrack]),
         metadata : {
-          width : videoTrack.width,
-          height : videoTrack.height
+          //width : videoTrack.width,
+          //height : videoTrack.height,
+          width:200,
+          height:200
         }
       };
       if (computePTSDTS) {

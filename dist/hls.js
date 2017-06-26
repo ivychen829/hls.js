@@ -10989,7 +10989,6 @@ var PlaylistLoader = function (_EventHandler) {
                             break;
                         case 'ENDLIST':
                             level.live = false;
-                            level.lwtrans = 1;
                             break;
                         case 'DIS':
                             cc++;
@@ -11882,8 +11881,10 @@ var MP4Remuxer = function () {
           codec: videoTrack.codec,
           initSegment: _mp4Generator2.default.initSegment([videoTrack]),
           metadata: {
-            width: videoTrack.width,
-            height: videoTrack.height
+            //width : videoTrack.width,
+            //height : videoTrack.height,
+            width: 200,
+            height: 200
           }
         };
         if (computePTSDTS) {
